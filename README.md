@@ -1,5 +1,5 @@
 # AbstractClasses_Interfaces
-Last Edited: Nov 28 2022 @ 16:00
+Last Edited: Nov 30 2022 @ 17:00
 
 Written for: Java class QAP4 Semester 4
 
@@ -17,3 +17,5 @@ Create classes of different shapes and create objects--including attributes name
 
 
 Second problem involves using an interface.
+
+Create a scalable method and scale each of your created objects; showing the before and after print statements.
