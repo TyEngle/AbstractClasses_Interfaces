@@ -1,4 +1,4 @@
-package com.keyin.qap4.abstractclasses;
+package com.keyin.qap4;
 
 public class Circle extends Shape{
     //instance var majorAxisA, minorAxisB
@@ -41,9 +41,17 @@ public class Circle extends Shape{
     }
 
     @Override
+    public void scale(int scalingFactor) {
+        this.majorAxisA *= scalingFactor;
+        this.minorAxisB *= scalingFactor;
+    }
+
+    @Override
     public String toString() {
         return "Circle obj by name of "+ getName()
                 + "\nwith area of "+ getArea()
                 + " \nnd circumference of "+ getPerimeter();
     }
+
+
 }

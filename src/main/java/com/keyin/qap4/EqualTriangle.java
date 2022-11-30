@@ -1,6 +1,6 @@
-package com.keyin.qap4.abstractclasses;
+package com.keyin.qap4;
 
-public class RegularTriangle extends Shape{
+public class EqualTriangle extends Shape{
     //instance var sideA, sideB, sideC
     //parameter constructor
     //accessor and modifier(get set)
@@ -8,31 +8,22 @@ public class RegularTriangle extends Shape{
     private int sideA, sideB, sideC;
 
 
-    public RegularTriangle(String newName, int newSideA, int newSideB, int newSideC) {
-    //constructor to create new regular triangle object
-    //name from super class, sideA, sideB, sideC
-    // must verify the following:
-        //side1+side2>side3
-        //side2+side3>side1
-        //side3+side1>side2
+    public EqualTriangle(String newName, int newSideLength) {
         super(newName);
-        if ((newSideA+newSideB)>newSideC && (newSideA+newSideC)>newSideB && (newSideB+newSideC)>newSideA){
-            //continue to create object
-            this.sideA = newSideA;
-            this.sideB = newSideB;
-            this.sideC = newSideC;
-        } else{
-            //break out and stop program
-            System.out.println("Invalid creation of triangle");
-            System.exit(406);
-        }
+        this.sideA = newSideLength;
+        this.sideB = newSideLength;
+        this.sideC = newSideLength;
 
     }
+
+
+
 
     //get and set for instance variables
     public int getSideA() {
         return sideA;
     }
+
     public void setSideA(int sideA) {
         this.sideA = sideA;
     }
@@ -40,6 +31,7 @@ public class RegularTriangle extends Shape{
     public int getSideB() {
         return sideB;
     }
+
     public void setSideB(int sideB) {
         this.sideB = sideB;
     }
@@ -47,11 +39,12 @@ public class RegularTriangle extends Shape{
     public int getSideC() {
         return sideC;
     }
+
     public void setSideC(int sideC) {
         this.sideC = sideC;
     }
 
-//get method for finding perimeter and area
+    //get method for finding perimeter and area
     @Override
     public double getPerimeter(){
         return sideA + sideB + sideC;
@@ -63,11 +56,19 @@ public class RegularTriangle extends Shape{
     }
 
     @Override
+    public void scale(int scalingFactor) {
+        //sideA, sideB, sideC
+        this.sideA *= scalingFactor;
+        this.sideB *= scalingFactor;
+        this.sideC *= scalingFactor;
+    }
+
+    @Override
     public String toString(){
-        return "Regular triangle obj with name of "+ getName()
+        return "Equilateral triangle obj with name of "+ getName()
                 + "\nand sides of A: "+getSideA()
                 + ", B: "+getSideB()+ ", C: "+getSideC()
-                + "\nwith area of "+ getArea()
+                + "\nhas an area of "+ getArea()
                 + "\nand a perimeter of "+ getPerimeter();
     }
 
