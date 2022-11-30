@@ -1,4 +1,4 @@
-package com.keyin.qap4.abstractclasses;
+package com.keyin.qap4;
 
 public class Ellipse extends Shape{
     //instance var majorAxisA minorAxisB
@@ -26,6 +26,12 @@ public class Ellipse extends Shape{
     @Override
     public double getPerimeter() {
         return (2 * 3.14 * Math.sqrt((majorAxisA * majorAxisA + minorAxisB * minorAxisB) / (2 * 1.0)));
+    }
+
+    @Override
+    public void scale(int scalingFactor) {
+        this.majorAxisA *= scalingFactor;
+        this.minorAxisB *= scalingFactor;
     }
 
     @Override

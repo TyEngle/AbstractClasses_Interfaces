@@ -1,6 +1,6 @@
-package com.keyin.qap4.abstractclasses;
+package com.keyin.qap4;
 
-public abstract class Shape {
+public abstract class Shape implements Scalable{
     //instance var name
     //parameter constructor
     //accessor and modifier(get set)
@@ -23,4 +23,6 @@ public abstract class Shape {
     public abstract double getPerimeter();
 
     public abstract String toString();
+
+    public abstract void scale(int scalingFactor);
 }

@@ -1,4 +1,6 @@
-package com.keyin.qap4.abstractclasses;
+package com.keyin.qap4;
+
+import com.keyin.qap4.*;
 
 import java.util.ArrayList;
 
